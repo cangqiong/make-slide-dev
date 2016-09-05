@@ -1,0 +1,174 @@
+/*
+ *
+ *用户操作主界面
+ * 
+ */
+ body {
+    /*overflow: hidden;*/
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+a {
+    text-decoration: none;
+}
+#main {
+    margin: 0;
+    margin-left: 24.5%;
+    margin-top: 0.01em;
+    padding: 0 auto;
+    width: 78%;
+    min-width: 500px;
+    min-height: 300px;
+}
+.edui-editor-toolbarbox {
+    border: 1px solid rgb(198, 198, 198);
+    width: 59em;
+}
+.edui-editor-iframeholder {
+    border: 1px solid rgb(198, 198, 198);
+    margin: 0 auto;
+    margin-top: 2px;
+    margin-left: 9em;
+}
+.edui-editor-bottomContainer {
+    display: none;
+}
+.tag {
+    min-width: 500px;
+}
+.none {
+    display: none;
+}
+/*******************尾部样式****************/
+ footer {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    height: 1.6em;
+    width: 100%;
+    background: rgb(210, 71, 38);
+}
+/*******************演示效果****************/
+ #player {
+}
+form {
+    display: none;
+}
+/*******************头部样式****************/
+ header {
+    height: 30px;
+    width: 100%;
+    /*border: 1px solid rgb(198, 198, 198);*/
+    background: rgb(210, 71, 38);
+}
+#s1 {
+    display: inline;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 10px;
+    margin: 20px 0 2px 28%;
+}
+#s2 {
+    margin-left: 6%;
+}
+#s3 {
+    margin-left: 60px;
+    margin-right: 0px;
+    /*border: 1px solid black;*/
+}
+header ul {
+    list-style: none;
+    display: none;
+}
+/*******************导航样式****************/
+ #page-nav {
+    text-align: center;
+    overflow-y: scroll;
+    max-height: 175px;
+    /*border: 1px solid black;*/
+}
+/*******************sidebar样式****************/
+ #sidebar {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    padding: 5px 0px 0px 10px;
+    margin-top: 0.2px;
+    width: 22%;
+    height: 36.85em;
+    border: 1px solid rgb(198, 198, 198);
+    /*background-color:#eee;*/
+}
+.click {
+    background-color: #123;
+    border: 1px solid #445;
+}
+#sidebar ul {
+    list-style: none;
+    margin-right: 10px;
+    max-height: 400px;
+    /*max-height: 1000px;*/
+    /*overflow-y: scroll;*/
+    /*overflow-x: hidden;*/
+    margin-bottom: 10px;
+    padding: 0;
+}
+#sidebar ul li {
+    width: 95%;
+    text-align: center;
+    margin: 2px 5px 0px 2px;
+    height: 25px;
+    border: 1px solid rgb(198, 198, 198);
+}
+.thumbnail {
+    width: 85px;
+    height: 65px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+    display: block;
+    line-height: 20px;
+    padding: 4px;
+    transition: all 0.2s ease-in-out 0s;
+}
+.thumbnail :hover {
+    border: 1px solid #DDDDDD;
+    transition: all 2s ease-in-out 0s;
+}
+.thumbnail img {
+    width: 85px;
+    height: 65px;
+}
+li:first-child > a {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+li:last-child > a {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.span1 {
+}
+/*********按钮*************/
+ #btn-group {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+}
+#btn-group > .btn {
+    font-size: 14px;
+    border-radius: 8px;
+    position: relative;
+}
+#btn-group button img {
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}
+.addIco {
+}
+.downloadIco {
+}

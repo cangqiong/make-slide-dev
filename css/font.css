@@ -1,0 +1,49 @@
+﻿/**
+ *
+ *
+ *HTML5字体设置
+ *
+ *
+ **/
+
+@font-face {
+    font-family: '华文行楷';
+    src:  url('../lib/华文行楷.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '隶书';
+    src:  url('../lib/隶书.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '华文楷体';
+    src:  url('../lib/华文楷体.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '楷体';
+    src:  url('../lib/楷体.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'times';
+    src:  url('../lib/times.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '宋体';
+    src:  url('../lib/宋体.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

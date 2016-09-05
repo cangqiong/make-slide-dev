@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>幻灯片可视化操作</title>
+    <link rel="stylesheet" href="./css/lib/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <script type="text/javascript" charset="utf-8" src="./ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./ueditor.all.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./js/lib/jquery.js"></script>
+    <script type="text/javascript" src="./js/tools.js" defer="defer"></script>
+</head>
+
+<body onload="showPageNumber()">
+
+    <header id="head">
+
+        <span id="s2"><a href="#" onclick="selectAnimation()">切换动画</a>
+        </span>
+        <span id="s3"><a href="#" onclick="player()">预览</a>
+            <!-- <ul class="hiddenul ">
+    <li>从头开始播放</li>
+    <li>从此页开始播放</li>
+</ul>
+ -->
+
+        </span>
+        <span id="s1">HTML5幻灯片制作</span>
+
+    </header>
+    <aside id="sidebar">
+        <div id="layout-panel">
+            <h2>布局</h2>
+            <table>
+                <tr>
+                    <td>
+                        <a class="thumbnail" href="#" title="普通" onclick="applyTemplate(templ1)">
+                            <img src="src/normal.png">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="thumbnail" href="#" title="两列" onclick="applyTemplate(templ2)">
+                            <img src="src/double.png">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="thumbnail" href="#" title="子标题" onclick="applyTemplate(templ3)">
+                            <img src="src/subtitle.png">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="thumbnail" href="#" title="标题" onclick="applyTemplate(templ4)">
+                            <img src="src/title.png">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="thumbnail" href="#" title="两行" onclick="applyTemplate(templ5)">
+                            <img src="src/imax.png">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="thumbnail" href="#" title="两列子标题" onclick="applyTemplate(templ6)">
+                            <img src="src/double-subtitle.png">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <h2>分页</h2>
+        <div id="page-nav">
+            <ul id="slidePage">
+            </ul>
+        </div>
+
+        <div id="btn-group">
+            <button onclick="addSlide()" class="btn" title="添加页面">
+                <a class="addIco">
+                    <img src="src/add.png">
+                </a>
+            </button>
+            <button onclick="beforeSlide()" class="btn" title="向上翻页">
+                <a class="upIco">
+                    <img src="src/up.png">
+                </a>
+            </button>
+            <button onclick="afterSlide()" class="btn" title="向下翻页">
+                <a class="downIco">
+                    <img src="src/down.png">
+                </a>
+            </button>
+            <button onclick="deleteThisSlide()" class="btn" title="删除当前页面">
+                <a class="deleteIco">
+                    <img src="src/delete.png">
+                </a>
+            </button>
+            <button onclick="saveSlides()" class="btn" title="保存">
+                <a class="seveIco">
+                    <img src="src/save.png">
+                </a>
+            </button>
+            <button onclick="writeHtml(document.getElementById('form'));" class="btn" title="下载幻灯片">
+                <a class="downloadIco">
+                    <img src="src/download.png">
+                </a>
+            </button>
+        </div>
+    </aside>
+    <div id="main">
+        <script id="editor0" type="text/plain" style="width:65%; height: 33.4em;" class="tag" title="第一页"></script>
+    </div>
+    <div id="player" class="none">
+
+
+    </div>
+    <form action="./writeHtml.php" method="post" onsubmit="writeHtml(this);return flase;" id="form">
+        <input type="hidden" name="json" id="json" />
+    </form>
+
+    <footer id="foot">
+        <span id="page"></span>
+    </footer>
+
+    <script type="text/javascript">
+    function writeHtml(o) {
+        saveSlides();
+        var text = JSON.stringify(htmlArr);
+        document.getElementById('json').value = text;
+        o.submit();
+    }
+    </script>
+</body>
+
+</html>

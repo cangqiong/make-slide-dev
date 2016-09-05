@@ -1,0 +1,350 @@
+﻿/**
+ *
+ *
+ *HTML5幻灯片样式
+ *
+ *
+ **/
+
+/******************基本样式***************************/
+ body {
+    font-family: sans-serif, 'Times New Roman';
+    overflow: hidden;
+    line-height: 1.25;
+    background: none;
+}
+/***** 幻灯片样式 *****/
+ .slide {
+    width:694px;
+    height: 33.4em;
+    /*    width: 850px;
+    height: 625px;
+*/
+    position: absolute;
+    top: 8%;
+    left: 26%;
+    z-index: 10;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
+    -o-box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
+    /* 幻灯片切换的动画效果 */
+    opacity: 0;
+    /********圆角半径********/
+    -webkit-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    background: white;
+}
+.none {
+    display: none;
+}
+.current {
+    /* 幻灯片切换的动画效果 */
+    z-index: 20;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    opacity: 1;
+    -trident-transform: scale(1);
+}
+/***** 幻灯片动画样式定义 *****/
+ .before {
+    opacity: 0;
+}
+.after {
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    opacity: 1;
+    -trident-transition: opacity .5s ease-in-out;
+}
+/***** 模板属性 *****/
+ .tempslide {
+    margin: auto;
+    width: 850px;
+    height: 625px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 280px;
+    margin-top: 20px;
+    z-index: 10;
+    overflow: hidden;
+    background-color: rgb(201, 180, 87);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
+    -o-box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
+    /* 幻灯片切换的动画效果 */
+    opacity: 0;
+    /********圆角半径********/
+    -webkit-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+#slide1 td, #slide1 th {
+    background: none;
+    border: 1px solid #DDDDDD;
+    padding: 5px 10px;
+}
+/* 普通模板 */
+ .tmpl-normal {
+}
+/* 大标题模板 */
+ .tmpl-title {
+    text-align: center;
+}
+.tmpl-title h1 {
+    margin-top: 220px;
+}
+/* 子标题模板 */
+ .tmpl-subtitle h2 {
+    margin-top: 180px;
+    padding: 0 40px 0 120px;
+}
+.tmpl-subtitle p {
+    padding: 0 120px;
+}
+/* 图片展示模板 */
+ .tmpl-picture {
+    text-align: center;
+}
+.tmpl-picture img {
+    margin-top: 20px;
+    border: 1px black solid;
+    height: 200px;
+}
+/* 分栏模板 */
+ .tmpl-columns > section {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 40px;
+    -webkit-column-rule: 0;
+    -moz-column-count: 2;
+    -moz-column-gap: 40px;
+    -moz-column-rule: 0;
+    -o-column-count: 2;
+    -o-column-gap: 40px;
+    -o-column-rule: 0;
+    -trident-column-count: 2;
+    -trident-column-gap: 40px;
+    -trident-column-rule: 0;
+}
+/* 块状正文模板 */
+ .tmpl-block > section {
+    height: 280px;
+}
+.tmpl-block > section > *:first-child {
+    height: 100%;
+}
+.tmpl-block > section > img:first-child, .tmpl-block > section > video:first-child {
+    border: 1px black solid;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.trans3d {
+    min-height: 28px;
+    padding: 100px 0 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    border: solid transparent;
+    background-color: rgba(0, 0, 0, .1);
+    background-clip: padding-box;
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07);
+    -moz-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07);
+    box-shadow: inset 1px 1px 0;
+}
+/**************************按钮样式****************************/
+ .bu {
+    display: block;
+    position: absolute;
+    top: 492px;
+    left: 412px;
+    width: 290px;
+    height: 40px;
+}
+.bu span {
+    display: inline;
+}
+.butPosition {
+    display: inline;
+    list-style: none;
+}
+.button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    display: inline-block;
+    margin-left: .2em;
+    padding: 7px 12px 9px;
+    border-radius: 2px;
+    box-shadow: inset rgba(255, 255, 255, .3) 1px 1px 0;
+    cursor: pointer;
+    -webkit-transition: .1s linear;
+    -moz-transition: .1s linear;
+    -ms-transition: .1s linear;
+    -o-transition: .1s linear;
+    transition: .1s linear;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+}
+.button:active {
+    box-shadow: inset rgba(0, 0, 0, .4) 0 0 6px;
+}
+.rounded {
+    border-radius: 18px;
+}
+.orange {
+    border: 1px solid #e59500;
+    background: rgb(255, 183, 0);
+    background: -moz-linear-gradient(top, rgba(255, 183, 0, 1) 0%, rgba(255, 140, 0, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 183, 0, 1)), color-stop(100%, rgba(255, 140, 0, 1)));
+    background: -webkit-linear-gradient(top, rgba(255, 183, 0, 1) 0%, rgba(255, 140, 0, 1) 100%);
+    background: -o-linear-gradient(top, rgba(255, 183, 0, 1) 0%, rgba(255, 140, 0, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 183, 0, 1) 0%, rgba(255, 140, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 183, 0, 1) 0%, rgba(255, 140, 0, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb700', endColorstr='#ff8c00', GradientType=0);
+}
+.orange:hover {
+    background: rgb(255, 203, 72);
+    background: -moz-linear-gradient(top, rgba(255, 203, 72, 1) 0%, rgba(255, 156, 35, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 203, 72, 1)), color-stop(100%, rgba(255, 156, 35, 1)));
+    background: -webkit-linear-gradient(top, rgba(255, 203, 72, 1) 0%, rgba(255, 156, 35, 1) 100%);
+    background: -o-linear-gradient(top, rgba(255, 203, 72, 1) 0%, rgba(255, 156, 35, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 203, 72, 1) 0%, rgba(255, 156, 35, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 203, 72, 1) 0%, rgba(255, 156, 35, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcb48', endColorstr='#ff9c23', GradientType=0);
+}
+.butPosition {
+    position: absolute;
+    top: 500px;
+    left: 548px;
+    display: inline;
+    list-style: none;
+}
+.button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    display: inline-block;
+    margin-left: .2em;
+    padding: 7px 12px 9px;
+    cursor: pointer;
+    -webkit-transition: .1s linear;
+    -moz-transition: .1s linear;
+    -ms-transition: .1s linear;
+    -o-transition: .1s linear;
+    transition: .1s linear;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+}
+.button {
+    border-radius: 2px;
+    box-shadow: inset rgba(255, 255, 255, .3) 1px 1px 0;
+}
+.button:active {
+    box-shadow: inset rgba(0, 0, 0, .4) 0 0 6px;
+}
+.rounded {
+    border-radius: 18px;
+}
+.orange {
+    border: 1px solid #e59500;
+    background: rgb(255, 183, 0);
+    background: -moz-linear-gradient(top, rgba(255, 183, 0, 1) 0%, rgba(255, 140, 0, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 183, 0, 1)), color-stop(100%, rgba(255, 140, 0, 1)));
+    background: -webkit-linear-gradient(top, rgba(255, 183, 0, 1) 0%, rgba(255, 140, 0, 1) 100%);
+    background: -o-linear-gradient(top, rgba(255, 183, 0, 1) 0%, rgba(255, 140, 0, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 183, 0, 1) 0%, rgba(255, 140, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 183, 0, 1) 0%, rgba(255, 140, 0, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb700', endColorstr='#ff8c00', GradientType=0);
+}
+.orange:hover {
+    background: rgb(255, 203, 72);
+    background: -moz-linear-gradient(top, rgba(255, 203, 72, 1) 0%, rgba(255, 156, 35, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 203, 72, 1)), color-stop(100%, rgba(255, 156, 35, 1)));
+    background: -webkit-linear-gradient(top, rgba(255, 203, 72, 1) 0%, rgba(255, 156, 35, 1) 100%);
+    background: -o-linear-gradient(top, rgba(255, 203, 72, 1) 0%, rgba(255, 156, 35, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 203, 72, 1) 0%, rgba(255, 156, 35, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 203, 72, 1) 0%, rgba(255, 156, 35, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcb48', endColorstr='#ff9c23', GradientType=0);
+}
+/**************************全屏样式****************************/
+ :-webkit-full-screen {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    background-color: black;
+}
+:-moz-full-screen {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    background-color: black;
+}
+:-ms-fullscreen {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    background-color: black;
+}
+:-webkit-full-screen .slide {
+    margin-top: 40px;
+}
+:-moz-full-screen .slide {
+    margin-top: 40px;
+}
+:-ms-fullscreen .slide {
+    margin-top: 40px;
+}
+:full-screen {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    background-color: black;
+}
+:fullscreen {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    background-color: black;
+}
+:-webkit-full-screen video {
+    width: 100%;
+    height: 100%;
+}
+:-moz-full-screen video {
+    width: 100%;
+    height: 100%;
+}
+/* 当在全屏模式下显示元素时，可以使用该元素设置后台属性*/
+ ::backdrop {
+    /* properties */
+}
+::-ms-backdrop {
+    /* properties */
+}
